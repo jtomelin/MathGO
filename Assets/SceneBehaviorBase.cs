@@ -12,27 +12,29 @@ public class SceneBehaviorBase : MonoBehaviour
         eButtonC    ,
     }
 
-    public Image imageComponent;
-
-    private Sprite greenButton;
-
     public Button btnAlternativaA;
     public Button btnAlternativaB;
     public Button btnAlternativaC;
 
-    private eButton rightAnswerButton;
+    public string enunciado;
+    public string alternativaA;
+    public string alternativaB;
+    public string alternativaC;
+
+    public eButton rightAnswerButton;
 
     // Use this for initialization
     public virtual void Start()
     {
-        greenButton = Resources.Load<Sprite>("botao-alternativa-correta");
+        this.btnAlternativaA.onClick.AddListener(OnButtonAClick);
+        this.btnAlternativaB.onClick.AddListener(OnButtonBClick);
+        this.btnAlternativaC.onClick.AddListener(OnButtonCClick);
 
-        imageComponent        = GetComponent<Image>();
-        imageComponent.sprite = greenButton;
+        this.btnAlternativaA.gameObject.GetComponentInChildren<Text>().text = this.alternativaA;
+        this.btnAlternativaB.gameObject.GetComponentInChildren<Text>().text = this.alternativaB;
+        this.btnAlternativaC.gameObject.GetComponentInChildren<Text>().text = this.alternativaC;
 
-        btnAlternativaA.onClick.AddListener(OnButtonAClick);
-        btnAlternativaB.onClick.AddListener(OnButtonBClick);
-        btnAlternativaC.onClick.AddListener(OnButtonCClick);
+        GameObject.Find("borda_pergunta").GetComponentInChildren<Text>().text = this.enunciado;
     }
 
     // Update is called once per frame
@@ -42,13 +44,20 @@ public class SceneBehaviorBase : MonoBehaviour
 
     void OnGenericButtonClick(eButton buttonClicked)
     {
+        if (GameObject.FindGameObjectWithTag("Resultado") != null)
+            return;
+
+        Debug.Log("Entrou");
+
+        AfterResultClick(true);
+
         if (buttonClicked == rightAnswerButton)
         {
-            //do something
+            //
         }
         else
         {
-            // do another thing
+            //EditorUtility.DisplayDialog("Math GO", "Resposta incorreta", "OK");
         }
     }
 
@@ -57,4 +66,16 @@ public class SceneBehaviorBase : MonoBehaviour
     void OnButtonCClick() { OnGenericButtonClick(eButton.eButtonC); }
 
     public void SetRightAnswerButton(eButton rightAnswerButton) { this.rightAnswerButton = rightAnswerButton; }
+
+
+    public void AfterResultClick(bool bRespostaCorreto)
+    {
+        OnDestroyWithGIF();
+    }
+
+    public virtual void OnDestroyWithGIF()
+    {
+        Debug.Log("Caiu na classe pai");
+    }
+
 }
