@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-public class SceneBehaviorBase : MonoBehaviour
+using UnityEngine;
+using Vuforia;
+public class SceneBehaviorBase : DefaultTrackableEventHandler
 {
     public enum eButton
     {
@@ -15,6 +17,7 @@ public class SceneBehaviorBase : MonoBehaviour
     public Button btnAlternativaA;
     public Button btnAlternativaB;
     public Button btnAlternativaC;
+    public UnityEngine.UI.RawImage image;
 
     public string enunciado;
     public string alternativaA;
@@ -23,18 +26,16 @@ public class SceneBehaviorBase : MonoBehaviour
 
     public eButton rightAnswerButton;
 
+    public Canvas canvas;
+
     // Use this for initialization
     public virtual void Start()
     {
+        base.Start();
+
         this.btnAlternativaA.onClick.AddListener(OnButtonAClick);
         this.btnAlternativaB.onClick.AddListener(OnButtonBClick);
         this.btnAlternativaC.onClick.AddListener(OnButtonCClick);
-
-        this.btnAlternativaA.gameObject.GetComponentInChildren<Text>().text = this.alternativaA;
-        this.btnAlternativaB.gameObject.GetComponentInChildren<Text>().text = this.alternativaB;
-        this.btnAlternativaC.gameObject.GetComponentInChildren<Text>().text = this.alternativaC;
-
-        GameObject.Find("borda_pergunta").GetComponentInChildren<Text>().text = this.enunciado;
     }
 
     // Update is called once per frame
@@ -76,6 +77,30 @@ public class SceneBehaviorBase : MonoBehaviour
     public virtual void OnDestroyWithGIF()
     {
         Debug.Log("Caiu na classe pai");
+    }
+
+    protected override void OnTrackingFound() 
+    {
+        base.OnTrackingFound();
+
+        this.btnAlternativaA.gameObject.GetComponentInChildren<Text>().text = this.alternativaA;
+        this.btnAlternativaB.gameObject.GetComponentInChildren<Text>().text = this.alternativaB;
+        this.btnAlternativaC.gameObject.GetComponentInChildren<Text>().text = this.alternativaC;
+
+        GameObject.Find("borda_pergunta").GetComponentInChildren<Text>().text = this.enunciado;
+
+        canvas.enabled = true;
+        image.enabled = true;
+        Debug.Log("Encontrei o marcador");
+    }
+
+    protected override void OnTrackingLost()
+    {
+        base.OnTrackingLost();
+
+        canvas.enabled = false;
+        image.enabled = false;
+        Debug.Log("Tchau marcador");
     }
 
 }

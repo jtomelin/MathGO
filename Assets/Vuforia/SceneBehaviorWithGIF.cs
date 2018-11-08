@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class SceneBehaviorWithGIF : SceneBehaviorBase
 {
+    public UnityEngine.UI.Image imageGIF;
+
     public SceneBehaviorWithGIF()
     {
 
