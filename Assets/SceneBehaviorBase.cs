@@ -18,6 +18,7 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     public Button btnAlternativaB;
     public Button btnAlternativaC;
     public UnityEngine.UI.RawImage image;
+    public GameObject obj3D;
 
     public string enunciado;
     public string alternativaA;
@@ -28,14 +29,20 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
     public Canvas canvas;
 
+    private bool respondido;
+
     // Use this for initialization
     public virtual void Start()
     {
         base.Start();
 
+        respondido = false; //ler essa info do Banco (Tu nem vem o banco)
+
         this.btnAlternativaA.onClick.AddListener(OnButtonAClick);
         this.btnAlternativaB.onClick.AddListener(OnButtonBClick);
         this.btnAlternativaC.onClick.AddListener(OnButtonCClick);
+
+        obj3D.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,32 +52,40 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
     void OnGenericButtonClick(eButton buttonClicked)
     {
+        if (mTrackableBehaviour.CurrentStatus != TrackableBehaviour.Status.TRACKED)
+            return;
+
+        if (obj3D == null)
+            return;
+
         if (GameObject.FindGameObjectWithTag("Resultado") != null)
             return;
 
-        Debug.Log("Entrou");
-
-        AfterResultClick(true);
+        //Debug.Log("Entrou");
 
         if (buttonClicked == rightAnswerButton)
         {
-            //
         }
         else
         {
-            //EditorUtility.DisplayDialog("Math GO", "Resposta incorreta", "OK");
         }
+
+        AfterResultClick(true);
+
+        obj3D.SetActive(true);
+
+        respondido = true;
     }
 
     void OnButtonAClick() { OnGenericButtonClick(eButton.eButtonA); }
     void OnButtonBClick() { OnGenericButtonClick(eButton.eButtonB); }
     void OnButtonCClick() { OnGenericButtonClick(eButton.eButtonC); }
 
-    public void SetRightAnswerButton(eButton rightAnswerButton) { this.rightAnswerButton = rightAnswerButton; }
-
-
     public void AfterResultClick(bool bRespostaCorreto)
     {
+        canvas.enabled = false;
+        image.enabled = false;
+
         OnDestroyWithGIF();
     }
 
@@ -82,6 +97,13 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     protected override void OnTrackingFound() 
     {
         base.OnTrackingFound();
+        Debug.Log("Encontrei o marcador");
+
+        if (respondido)
+        {
+            obj3D.SetActive(true);
+            return;
+        }
 
         this.btnAlternativaA.gameObject.GetComponentInChildren<Text>().text = this.alternativaA;
         this.btnAlternativaB.gameObject.GetComponentInChildren<Text>().text = this.alternativaB;
@@ -93,20 +115,20 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
         if (image != null)
             image.enabled = true;
-
-        Debug.Log("Encontrei o marcador");
     }
 
     protected override void OnTrackingLost()
     {
         base.OnTrackingLost();
+        Debug.Log("Tchau marcador");
 
         canvas.enabled = false;
 
+        if (obj3D != null)
+            obj3D.SetActive(false);
+
         if (image != null)
             image.enabled = false;
-
-        Debug.Log("Tchau marcador");
     }
 
 }
