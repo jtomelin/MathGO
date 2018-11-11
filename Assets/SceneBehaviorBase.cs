@@ -90,7 +90,10 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         GameObject.Find("borda_pergunta").GetComponentInChildren<Text>().text = this.enunciado;
 
         canvas.enabled = true;
-        image.enabled = true;
+
+        if (image != null)
+            image.enabled = true;
+
         Debug.Log("Encontrei o marcador");
     }
 
@@ -99,7 +102,10 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         base.OnTrackingLost();
 
         canvas.enabled = false;
-        image.enabled = false;
+
+        if (image != null)
+            image.enabled = false;
+
         Debug.Log("Tchau marcador");
     }
 
