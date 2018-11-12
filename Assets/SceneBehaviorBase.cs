@@ -84,7 +84,9 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     public void AfterResultClick(bool bRespostaCorreto)
     {
         canvas.enabled = false;
-        image.enabled = false;
+
+        if (image != null)
+            image.enabled = false;
 
         OnDestroyWithGIF();
     }
