@@ -31,8 +31,9 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
     private bool respondido;
 
+
     // Use this for initialization
-    public virtual void Start()
+    protected override void Start()
     {
         base.Start();
 
@@ -61,7 +62,7 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         if (GameObject.FindGameObjectWithTag("Resultado") != null)
             return;
 
-        //Debug.Log("Entrou");
+        Debug.Log("Clicou");
 
         if (buttonClicked == rightAnswerButton)
         {
@@ -72,7 +73,7 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
         AfterResultClick(true);
 
-        obj3D.SetActive(true);
+        
 
         respondido = true;
     }
@@ -88,11 +89,12 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         if (image != null)
             image.enabled = false;
 
-        OnDestroyWithGIF();
+        OnFinaliza();
     }
 
-    public virtual void OnDestroyWithGIF()
+    public virtual void OnFinaliza()
     {
+        obj3D.SetActive(true);
         Debug.Log("Caiu na classe pai");
     }
 
