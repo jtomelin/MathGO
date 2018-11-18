@@ -19,6 +19,7 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     public RawImage   image          ;
     public GameObject obj3D          ;
     public Canvas     canvas         ;
+    public Canvas     telaResultado  ;
 
     public string enunciado   ;
     public string alternativaA;
@@ -39,6 +40,19 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         this.btnAlternativaB.onClick.AddListener(OnButtonBClick);
         this.btnAlternativaC.onClick.AddListener(OnButtonCClick);
 
+        if (telaResultado != null)
+        {
+            Button btnOK = telaResultado.GetComponentInChildren<Button>();
+            if (btnOK != null)
+            {
+                btnOK.onClick.AddListener(OnButtonOK);
+                Debug.Log("Encontrou botao");
+            }
+
+            Debug.Log("Encontrou resultado");
+            telaResultado.enabled = false;
+        }
+
         if (obj3D != null)
             obj3D.SetActive(false);
     }
@@ -53,21 +67,9 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         if (mTrackableBehaviour.CurrentStatus != TrackableBehaviour.Status.TRACKED)
             return;
 
-        //if (GameObject.FindGameObjectWithTag("Resultado") != null)
-        //    return;
-
-        Debug.Log("Clicou");
-
-        if (buttonClicked == rightAnswerButton)
-        {
-        }
-        else
-        {
-        }
-
-        AfterResultClick(true);
-
         respondido = true;
+
+        ShowMessage(buttonClicked == rightAnswerButton);
     }
 
     void OnButtonAClick() { OnGenericButtonClick(eButton.eButtonA); }
@@ -76,8 +78,6 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
     public void AfterResultClick(bool bRespostaCorreto)
     {
-        canvas.enabled = false;
-
         if (image != null)
             image.enabled = false;
 
@@ -129,5 +129,50 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
         if (image != null)
             image.enabled = false;
+    }
+
+    void ShowMessage(bool bCorreta)
+    {
+        if (telaResultado != null)
+        {
+            string respostaCorreta = "";
+
+            switch (rightAnswerButton)
+            {
+                case eButton.eButtonA: respostaCorreta = "A resposta correta era a letra A."; break;
+                case eButton.eButtonB: respostaCorreta = "A resposta correta era a letra B."; break;
+                case eButton.eButtonC: respostaCorreta = "A resposta correta era a letra C."; break;
+            }
+
+            telaResultado.enabled = true;
+
+            GameObject imgCorreta = GameObject.Find("RespostaCorreta");
+            GameObject imgIncorreta = GameObject.Find("RespostaIncorreta");
+
+            Text txtResultado = telaResultado.GetComponentInChildren<Text>();
+
+            if (bCorreta)
+            {
+                txtResultado.text = "Parabéns, você acertou!";
+                imgIncorreta.SetActive(false);
+            }
+            else
+            {
+                txtResultado.text = "Que pena, você errou. " + respostaCorreta;
+                imgCorreta.SetActive(false);
+            }
+        }
+    }
+
+    void OnButtonOK()
+    {
+        Debug.Log("Clicou OK");
+
+        if (telaResultado != null)
+            telaResultado.enabled = false;
+
+        canvas.enabled = false;
+
+        AfterResultClick(true);
     }
 }
