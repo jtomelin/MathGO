@@ -1,0 +1,904 @@
+fileFormatVersion: 2
+guid: 283f9da6f099afe4ea178b9920d6f78a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: node_id571
+    100002: node_id579
+    100004: node_id605
+    100006: node_id613
+    100008: node_id619
+    100010: node_id620
+    100012: node_id622
+    100014: node_id623
+    100016: node_id625
+    100018: node_id627
+    100020: node_id628
+    100022: node_id629
+    100024: node_id631
+    100026: node_id633
+    100028: node_id634
+    100030: node_id636
+    100032: node_id638
+    100034: node_id639
+    100036: node_id641
+    100038: node_id643
+    100040: node_id644
+    100042: node_id646
+    100044: node_id648
+    100046: node_id649
+    100048: node_id651
+    100050: node_id653
+    100052: node_id654
+    100054: node_id656
+    100056: node_id658
+    100058: node_id659
+    100060: node_id661
+    100062: node_id662
+    100064: node_id664
+    100066: node_id666
+    100068: node_id667
+    100070: node_id668
+    100072: node_id670
+    100074: node_id672
+    100076: node_id673
+    100078: node_id674
+    100080: node_id676
+    100082: node_id678
+    100084: node_id680
+    100086: node_id682
+    100088: node_id683
+    100090: node_id685
+    100092: node_id687
+    100094: node_id689
+    100096: node_id691
+    100098: node_id692
+    100100: node_id694
+    100102: node_id696
+    100104: node_id698
+    100106: node_id700
+    100108: node_id701
+    100110: node_id703
+    100112: node_id705
+    100114: node_id707
+    100116: node_id709
+    100118: node_id711
+    100120: node_id712
+    100122: node_id713
+    100124: node_id715
+    100126: node_id717
+    100128: node_id718
+    100130: node_id720
+    100132: node_id722
+    100134: node_id723
+    100136: node_id725
+    100138: node_id727
+    100140: node_id729
+    100142: node_id731
+    100144: node_id733
+    100146: node_id735
+    100148: node_id737
+    100150: node_id739
+    100152: node_id741
+    100154: node_id742
+    100156: node_id744
+    100158: node_id746
+    100160: node_id748
+    100162: node_id772
+    100164: //RootNode
+    100166: root 1
+    400000: node_id571
+    400002: node_id579
+    400004: node_id605
+    400006: node_id613
+    400008: node_id619
+    400010: node_id620
+    400012: node_id622
+    400014: node_id623
+    400016: node_id625
+    400018: node_id627
+    400020: node_id628
+    400022: node_id629
+    400024: node_id631
+    400026: node_id633
+    400028: node_id634
+    400030: node_id636
+    400032: node_id638
+    400034: node_id639
+    400036: node_id641
+    400038: node_id643
+    400040: node_id644
+    400042: node_id646
+    400044: node_id648
+    400046: node_id649
+    400048: node_id651
+    400050: node_id653
+    400052: node_id654
+    400054: node_id656
+    400056: node_id658
+    400058: node_id659
+    400060: node_id661
+    400062: node_id662
+    400064: node_id664
+    400066: node_id666
+    400068: node_id667
+    400070: node_id668
+    400072: node_id670
+    400074: node_id672
+    400076: node_id673
+    400078: node_id674
+    400080: node_id676
+    400082: node_id678
+    400084: node_id680
+    400086: node_id682
+    400088: node_id683
+    400090: node_id685
+    400092: node_id687
+    400094: node_id689
+    400096: node_id691
+    400098: node_id692
+    400100: node_id694
+    400102: node_id696
+    400104: node_id698
+    400106: node_id700
+    400108: node_id701
+    400110: node_id703
+    400112: node_id705
+    400114: node_id707
+    400116: node_id709
+    400118: node_id711
+    400120: node_id712
+    400122: node_id713
+    400124: node_id715
+    400126: node_id717
+    400128: node_id718
+    400130: node_id720
+    400132: node_id722
+    400134: node_id723
+    400136: node_id725
+    400138: node_id727
+    400140: node_id729
+    400142: node_id731
+    400144: node_id733
+    400146: node_id735
+    400148: node_id737
+    400150: node_id739
+    400152: node_id741
+    400154: node_id742
+    400156: node_id744
+    400158: node_id746
+    400160: node_id748
+    400162: node_id772
+    400164: //RootNode
+    400166: root 1
+    2100000: Material_2520
+    2100002: Material_2582
+    2100004: Material_2583
+    2100006: Material_2584
+    2100008: Material_2585
+    2100010: Material_2586
+    2100012: Material_2587
+    2100014: Material_2588
+    2100016: Material_2589
+    2100018: Material_2590
+    2100020: Material_2591
+    2100022: Material_2592
+    2100024: Material_2593
+    2100026: Material_2594
+    2100028: Material_2595
+    2100030: Material_2596
+    2100032: Material_2597
+    2100034: Material_2598
+    2100036: Material_2599
+    2100038: Material_2600
+    2100040: Material_2601
+    2100042: Material_2602
+    2100044: Material_2603
+    2100046: Material_2604
+    2100048: Material_2605
+    2100050: Material_2606
+    2100052: Material_2607
+    2100054: Material_2608
+    2100056: Material_2609
+    2100058: Material_2610
+    2100060: Material_2611
+    2100062: Material_2612
+    2100064: Material_2613
+    2100066: Material_2614
+    2100068: Material_2615
+    2100070: Material_2616
+    2100072: Material_2617
+    2100074: Material_2618
+    2100076: Material_2619
+    2100078: Material_2620
+    2100080: Material_2621
+    2100082: Material_2622
+    2100084: Material_2623
+    2100086: Material_2624
+    2100088: Material_2625
+    2100090: Material_2626
+    2100092: Material_2627
+    2100094: Material_2628
+    2100096: Material_2629
+    2100098: Material_2630
+    2100100: Material_2631
+    2100102: Material_2632
+    2100104: Material_2633
+    2100106: Material_2634
+    2100108: Material_2723
+    2100110: Material_2716
+    2300000: node_id571
+    2300002: node_id579
+    2300004: node_id605
+    2300006: node_id613
+    2300008: node_id620
+    2300010: node_id623
+    2300012: node_id625
+    2300014: node_id629
+    2300016: node_id631
+    2300018: node_id634
+    2300020: node_id636
+    2300022: node_id639
+    2300024: node_id641
+    2300026: node_id644
+    2300028: node_id646
+    2300030: node_id649
+    2300032: node_id651
+    2300034: node_id654
+    2300036: node_id656
+    2300038: node_id659
+    2300040: node_id662
+    2300042: node_id664
+    2300044: node_id668
+    2300046: node_id670
+    2300048: node_id674
+    2300050: node_id676
+    2300052: node_id678
+    2300054: node_id680
+    2300056: node_id683
+    2300058: node_id685
+    2300060: node_id687
+    2300062: node_id689
+    2300064: node_id692
+    2300066: node_id694
+    2300068: node_id696
+    2300070: node_id698
+    2300072: node_id701
+    2300074: node_id703
+    2300076: node_id705
+    2300078: node_id707
+    2300080: node_id709
+    2300082: node_id713
+    2300084: node_id715
+    2300086: node_id718
+    2300088: node_id720
+    2300090: node_id723
+    2300092: node_id725
+    2300094: node_id727
+    2300096: node_id729
+    2300098: node_id731
+    2300100: node_id733
+    2300102: node_id735
+    2300104: node_id737
+    2300106: node_id739
+    2300108: node_id742
+    2300110: node_id744
+    2300112: node_id746
+    2300114: node_id772
+    2300116: root 1
+    3300000: node_id571
+    3300002: node_id579
+    3300004: node_id605
+    3300006: node_id613
+    3300008: node_id620
+    3300010: node_id623
+    3300012: node_id625
+    3300014: node_id629
+    3300016: node_id631
+    3300018: node_id634
+    3300020: node_id636
+    3300022: node_id639
+    3300024: node_id641
+    3300026: node_id644
+    3300028: node_id646
+    3300030: node_id649
+    3300032: node_id651
+    3300034: node_id654
+    3300036: node_id656
+    3300038: node_id659
+    3300040: node_id662
+    3300042: node_id664
+    3300044: node_id668
+    3300046: node_id670
+    3300048: node_id674
+    3300050: node_id676
+    3300052: node_id678
+    3300054: node_id680
+    3300056: node_id683
+    3300058: node_id685
+    3300060: node_id687
+    3300062: node_id689
+    3300064: node_id692
+    3300066: node_id694
+    3300068: node_id696
+    3300070: node_id698
+    3300072: node_id701
+    3300074: node_id703
+    3300076: node_id705
+    3300078: node_id707
+    3300080: node_id709
+    3300082: node_id713
+    3300084: node_id715
+    3300086: node_id718
+    3300088: node_id720
+    3300090: node_id723
+    3300092: node_id725
+    3300094: node_id727
+    3300096: node_id729
+    3300098: node_id731
+    3300100: node_id733
+    3300102: node_id735
+    3300104: node_id737
+    3300106: node_id739
+    3300108: node_id742
+    3300110: node_id744
+    3300112: node_id746
+    3300114: node_id772
+    3300116: root 1
+    4300000: node_id579
+    4300002: node_id605
+    4300004: node_id613
+    4300006: node_id571
+    4300008: node_id620
+    4300010: node_id623
+    4300012: node_id625
+    4300014: node_id629
+    4300016: node_id631
+    4300018: node_id634
+    4300020: node_id636
+    4300022: node_id639
+    4300024: node_id641
+    4300026: node_id644
+    4300028: node_id646
+    4300030: node_id649
+    4300032: node_id651
+    4300034: node_id654
+    4300036: node_id656
+    4300038: node_id659
+    4300040: node_id662
+    4300042: node_id664
+    4300044: node_id668
+    4300046: node_id670
+    4300048: node_id674
+    4300050: node_id676
+    4300052: node_id678
+    4300054: node_id680
+    4300056: node_id683
+    4300058: node_id685
+    4300060: node_id687
+    4300062: node_id689
+    4300064: node_id692
+    4300066: node_id694
+    4300068: node_id696
+    4300070: node_id698
+    4300072: node_id701
+    4300074: node_id703
+    4300076: node_id705
+    4300078: node_id707
+    4300080: node_id709
+    4300082: node_id713
+    4300084: node_id715
+    4300086: node_id718
+    4300088: node_id720
+    4300090: node_id723
+    4300092: node_id725
+    4300094: node_id727
+    4300096: node_id729
+    4300098: node_id731
+    4300100: node_id733
+    4300102: node_id735
+    4300104: node_id737
+    4300106: node_id739
+    4300108: node_id742
+    4300110: node_id744
+    4300112: node_id746
+    4300114: node_id772
+    4300116: root
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2520
+    second: {fileID: 2100000, guid: dd8ee7d55742c834aa32de15008a12de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2582
+    second: {fileID: 2100000, guid: 6f43169a44efa114482a4822bd375c3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2583
+    second: {fileID: 2100000, guid: 020091d8a1a388749a82a2b00b3637c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2584
+    second: {fileID: 2100000, guid: 6a6e22d4a2487094b923a36de5e1b1c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2585
+    second: {fileID: 2100000, guid: 5091eef80db07ef4697157740686702d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2586
+    second: {fileID: 2100000, guid: bae6e50c81e800b489e59959b0775319, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2587
+    second: {fileID: 2100000, guid: 8664f0674ad322f4180e7b406891b7e0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2588
+    second: {fileID: 2100000, guid: 93643a5b2e6f66348adb93a1d1b60091, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2589
+    second: {fileID: 2100000, guid: 1012467ffd8921d4da2c925d8e9dcd43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2590
+    second: {fileID: 2100000, guid: 5ed2a3cd516911b4c9e8a6455251e19c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2591
+    second: {fileID: 2100000, guid: 7e08b505ee40e0d45a470c39a856e43d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2592
+    second: {fileID: 2100000, guid: a92224755c87ded4886d5bb8b9d6adaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2593
+    second: {fileID: 2100000, guid: d44acc5f4e5534e45b866f43da5a60ac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2594
+    second: {fileID: 2100000, guid: 0a459babfde5f254bba0ef32cbae9332, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2595
+    second: {fileID: 2100000, guid: 85fd265913488d34c926c24820d1289d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2596
+    second: {fileID: 2100000, guid: 6c5f0a7b09a716148b68d977fcd07736, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2597
+    second: {fileID: 2100000, guid: 36cb332f220030048a0adb41a4601483, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2598
+    second: {fileID: 2100000, guid: d188c6ab695016249bb8da0d26705be7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2599
+    second: {fileID: 2100000, guid: 73d22db94084f9543bbc66fddc5035d9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2600
+    second: {fileID: 2100000, guid: 10530c984febf2046867a50e59874838, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2601
+    second: {fileID: 2100000, guid: d1d84d98cadfa4d4981247dab4a1858c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2602
+    second: {fileID: 2100000, guid: d3789e16e8797774e9d970b75d4d282c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2603
+    second: {fileID: 2100000, guid: 554dbc1a44574e648b9fa59c652b41cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2604
+    second: {fileID: 2100000, guid: bf5164bf5dc48bc4697f69632e86f1f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2605
+    second: {fileID: 2100000, guid: f48d7861ad02dc3458849dc5ec8ba50f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2606
+    second: {fileID: 2100000, guid: e65ed93b3eab6e545a2a9ce3af2eaf8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2607
+    second: {fileID: 2100000, guid: 26246cfc7670ac440aa36d0bf6907016, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2608
+    second: {fileID: 2100000, guid: dab27838d3741934586243d92f6385ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2609
+    second: {fileID: 2100000, guid: 7d7226fcfe4650a46aa13888b23c558f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2610
+    second: {fileID: 2100000, guid: c3eadbc9fd20c9246a001f124c05ad5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2611
+    second: {fileID: 2100000, guid: 38323d6a5cf3faa49bcded3848965b2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2612
+    second: {fileID: 2100000, guid: 9552be8014daf3342ad1bf8893ed94ae, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2613
+    second: {fileID: 2100000, guid: 47869faefaad47b4898d5cc0328a7886, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2614
+    second: {fileID: 2100000, guid: 5e4d36719c6c4704ab1e64db1121f961, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2615
+    second: {fileID: 2100000, guid: d8016c55fc224b848a257831a3a6a8e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2616
+    second: {fileID: 2100000, guid: 19c6dff34950f4945a977432dcc86c94, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2617
+    second: {fileID: 2100000, guid: 9dc778ba7a12fd5418a1e26e35eadb20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2618
+    second: {fileID: 2100000, guid: 5213ad9931fd652448df2bfcfc699e60, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2619
+    second: {fileID: 2100000, guid: 49e4f00925cceb2469632e50e853d4fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2620
+    second: {fileID: 2100000, guid: c03201f739046174e8962125b65bea67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2621
+    second: {fileID: 2100000, guid: 59b3a9892aeefe546a24a1ffe624b2da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2622
+    second: {fileID: 2100000, guid: 95e81ed2d6d27334daa025cfad548893, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2623
+    second: {fileID: 2100000, guid: c4c944d20677671448e8d31f8096d98c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2624
+    second: {fileID: 2100000, guid: f32de8aa71ed4d84282b3943301aecd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2625
+    second: {fileID: 2100000, guid: 891951f10630a504db05a89337d459ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2626
+    second: {fileID: 2100000, guid: 5d6549ed27f697d4abf09485e06e0f98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2627
+    second: {fileID: 2100000, guid: fbb35628176cbf04782b71622d823b96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2628
+    second: {fileID: 2100000, guid: 73f0c3769c24b534daed389c7fd380f0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2629
+    second: {fileID: 2100000, guid: 1390f5d1eb7b3da439e6525583757ece, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2630
+    second: {fileID: 2100000, guid: 5ff9917239b265b43817e6cdc1972364, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2631
+    second: {fileID: 2100000, guid: 13f45b1d5d055704db78f0478963133c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2632
+    second: {fileID: 2100000, guid: 066c432f47d40e24589ea63ceb4e9421, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2633
+    second: {fileID: 2100000, guid: 5a2c2514554484f429b64797a9d01a5d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2634
+    second: {fileID: 2100000, guid: 12085110f985e1740bf56173908d49e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2716
+    second: {fileID: 2100000, guid: a75357774088b3947b07d6f919a82a0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_2723
+    second: {fileID: 2100000, guid: 7d8655c017d9ff44b85e7237014c81c1, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 134
+    second: {fileID: 2800000, guid: 533313c74797a2d448a86d7f52972506, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 135
+    second: {fileID: 2800000, guid: 540be99b5bb0eb141ae35aea44067574, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 136
+    second: {fileID: 2800000, guid: 661eb826a429fca488ec217f696e0da2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 137
+    second: {fileID: 2800000, guid: 6e9e0f54fb7105e43bfe27a6923bc5ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 138
+    second: {fileID: 2800000, guid: d0ba5f5d30408404db0a888cdf6fed5f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 139
+    second: {fileID: 2800000, guid: 9306542d36a4cc74cba3444b3369c2fe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 140
+    second: {fileID: 2800000, guid: c220af857cc194945b47e3a61177eb14, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 141
+    second: {fileID: 2800000, guid: 4a3f771c5cf69bc4f89e42ccc8037c53, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 142
+    second: {fileID: 2800000, guid: d772027a37e25dc42abdcd32bdeb56fb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 143
+    second: {fileID: 2800000, guid: ddc4ffe8113a62d4aa5ec76d03d483cb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 144
+    second: {fileID: 2800000, guid: 8788124cc6ec9b14580f62f16187e4c3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 145
+    second: {fileID: 2800000, guid: 047386826bacd3c4aa44804ead9bbe90, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 146
+    second: {fileID: 2800000, guid: 252ca81c23ce06b41a47f5fea7b54a38, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 147
+    second: {fileID: 2800000, guid: 032de120cc552d6429d6648c45dc83c4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 148
+    second: {fileID: 2800000, guid: 5c1886aec0120f74e9c2c3b67a617565, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 149
+    second: {fileID: 2800000, guid: d9be57463f6e8fe4a8e25812c1abf223, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 150
+    second: {fileID: 2800000, guid: 0af51ed8753adb9428c28d677e4fb298, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 151
+    second: {fileID: 2800000, guid: 5cf25595a73a318499ae031ffb4222c3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 152
+    second: {fileID: 2800000, guid: 347af43e8ec2aad4ca8c5d7cc0204bbb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 153
+    second: {fileID: 2800000, guid: 865fb731b93552c499e6a1a5fcbac1b3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 154
+    second: {fileID: 2800000, guid: d2d838b108ffb9042a9597cddf0e234d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 155
+    second: {fileID: 2800000, guid: 8bd59769c9eefcb4fa4569627ace7674, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 156
+    second: {fileID: 2800000, guid: bb0708736679fd44fa666663d56c2a3a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 157
+    second: {fileID: 2800000, guid: 4d0605d59447a484e8dde53b4d3e2e89, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 158
+    second: {fileID: 2800000, guid: 618f833b0ddc1ea4bbfb423b4790c26c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 159
+    second: {fileID: 2800000, guid: 6172512c90678214dbde25b331d46816, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 160
+    second: {fileID: 2800000, guid: 8439c809aea2e034fae171d1fd6a7e66, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

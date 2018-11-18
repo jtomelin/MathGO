@@ -39,7 +39,8 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         this.btnAlternativaB.onClick.AddListener(OnButtonBClick);
         this.btnAlternativaC.onClick.AddListener(OnButtonCClick);
 
-        obj3D.SetActive(false);
+        if (obj3D != null)
+            obj3D.SetActive(false);
     }
 
     // Update is called once per frame
@@ -52,11 +53,8 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         if (mTrackableBehaviour.CurrentStatus != TrackableBehaviour.Status.TRACKED)
             return;
 
-        if (obj3D == null)
-            return;
-
-        if (GameObject.FindGameObjectWithTag("Resultado") != null)
-            return;
+        //if (GameObject.FindGameObjectWithTag("Resultado") != null)
+        //    return;
 
         Debug.Log("Clicou");
 
@@ -88,7 +86,9 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
     public virtual void OnAfterEffects()
     {
-        obj3D.SetActive(true);
+        if (obj3D != null)
+            obj3D.SetActive(true);
+
         Debug.Log("Caiu na classe pai");
     }
 
@@ -99,7 +99,9 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
         if (respondido)
         {
-            obj3D.SetActive(true);
+            if (obj3D != null)
+                obj3D.SetActive(true);
+
             return;
         }
 
@@ -128,5 +130,4 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         if (image != null)
             image.enabled = false;
     }
-
 }
