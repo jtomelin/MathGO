@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class SceneBehaviorWithGIF : SceneBehaviorBase
 {
@@ -19,12 +19,12 @@ public class SceneBehaviorWithGIF : SceneBehaviorBase
             this.imageGIF.SetActive(false);
     }
 
-    public override void OnFinaliza()
+    public override void OnAfterEffects()
     {
         if (this.imageGIF != null)
         {
             this.imageGIF.SetActive(true);
-            UnityEngine.Video.VideoPlayer videoPlayer = this.imageGIF.gameObject.GetComponentInChildren<UnityEngine.Video.VideoPlayer>();
+            VideoPlayer videoPlayer = this.imageGIF.gameObject.GetComponentInChildren<VideoPlayer>();
 
             videoPlayer.loopPointReached += EndReached;
 
@@ -38,7 +38,7 @@ public class SceneBehaviorWithGIF : SceneBehaviorBase
         Debug.Log("Caiu na classe filha");
     }
 
-    public void EndReached(UnityEngine.Video.VideoPlayer vp)
+    public void EndReached(VideoPlayer videoPlayer)
     {
         this.imageGIF.SetActive(false);
         obj3D.SetActive(true);

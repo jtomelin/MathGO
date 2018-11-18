@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine;
 using Vuforia;
 public class SceneBehaviorBase : DefaultTrackableEventHandler
 {
@@ -14,23 +13,20 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         eButtonC    ,
     }
 
-    public Button btnAlternativaA;
-    public Button btnAlternativaB;
-    public Button btnAlternativaC;
-    public UnityEngine.UI.RawImage image;
-    public GameObject obj3D;
+    public Button     btnAlternativaA;
+    public Button     btnAlternativaB;
+    public Button     btnAlternativaC;
+    public RawImage   image          ;
+    public GameObject obj3D          ;
+    public Canvas     canvas         ;
 
-    public string enunciado;
+    public string enunciado   ;
     public string alternativaA;
     public string alternativaB;
     public string alternativaC;
 
-    public eButton rightAnswerButton;
-
-    public Canvas canvas;
-
-    private bool respondido;
-
+    private bool    respondido       ;
+    public  eButton rightAnswerButton;
 
     // Use this for initialization
     protected override void Start()
@@ -73,8 +69,6 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
         AfterResultClick(true);
 
-        
-
         respondido = true;
     }
 
@@ -89,10 +83,10 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         if (image != null)
             image.enabled = false;
 
-        OnFinaliza();
+        OnAfterEffects();
     }
 
-    public virtual void OnFinaliza()
+    public virtual void OnAfterEffects()
     {
         obj3D.SetActive(true);
         Debug.Log("Caiu na classe pai");
