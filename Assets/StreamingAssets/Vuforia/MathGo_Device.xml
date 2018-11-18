@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="Grupo12" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo11" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo10" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo9" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo8" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo7" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo6" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo5" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo4" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo3" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo2" size="0.200000 0.200000" />
+    <ImageTarget name="Grupo1" size="0.200000 0.200000" />
     <ImageTarget name="Marker2" size="0.200000 0.200000" />
     <ImageTarget name="Marker1" size="0.200000 0.200000" />
     <ImageTarget name="Marker30" size="0.200000 0.200000" />
