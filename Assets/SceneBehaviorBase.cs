@@ -29,10 +29,16 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     private bool    respondido       ;
     public  eButton rightAnswerButton;
 
+    private GameObject imgCorreta  ;
+    private GameObject imgIncorreta;
+
     // Use this for initialization
     protected override void Start()
     {
         base.Start();
+
+        imgCorreta   = GameObject.Find("RespostaCorreta");
+        imgIncorreta = GameObject.Find("RespostaIncorreta");
 
         respondido = false; //ler essa info do Banco (Tu nem vem o banco)
 
@@ -44,17 +50,15 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         {
             Button btnOK = telaResultado.GetComponentInChildren<Button>();
             if (btnOK != null)
-            {
                 btnOK.onClick.AddListener(OnButtonOK);
-                Debug.Log("Encontrou botao");
-            }
 
-            Debug.Log("Encontrou resultado");
             telaResultado.enabled = false;
         }
 
         if (obj3D != null)
             obj3D.SetActive(false);
+
+        canvas.enabled = false;
     }
 
     // Update is called once per frame
@@ -64,8 +68,10 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
     void OnGenericButtonClick(eButton buttonClicked)
     {
-        if (mTrackableBehaviour.CurrentStatus != TrackableBehaviour.Status.TRACKED)
+        if (mTrackableBehaviour.CurrentStatus != TrackableBehaviour.Status.TRACKED || respondido)
             return;
+
+        MathGOUtils.LastTrackableName = mTrackableBehaviour.TrackableName;
 
         respondido = true;
 
@@ -88,16 +94,13 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     {
         if (obj3D != null)
             obj3D.SetActive(true);
-
-        Debug.Log("Caiu na classe pai");
     }
 
     protected override void OnTrackingFound() 
     {
         base.OnTrackingFound();
-        Debug.Log("Encontrei o marcador");
 
-        if (respondido)
+        if (respondido && !telaResultado.isActiveAndEnabled)
         {
             if (obj3D != null)
                 obj3D.SetActive(true);
@@ -120,9 +123,9 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     protected override void OnTrackingLost()
     {
         base.OnTrackingLost();
-        Debug.Log("Tchau marcador");
 
-        canvas.enabled = false;
+        if (!respondido)
+            canvas.enabled = false;
 
         if (obj3D != null)
             obj3D.SetActive(false);
@@ -146,27 +149,27 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
             telaResultado.enabled = true;
 
-            GameObject imgCorreta = GameObject.Find("RespostaCorreta");
-            GameObject imgIncorreta = GameObject.Find("RespostaIncorreta");
-
             Text txtResultado = telaResultado.GetComponentInChildren<Text>();
 
             if (bCorreta)
             {
                 txtResultado.text = "Parabéns, você acertou!";
+                imgCorreta.SetActive(true);
                 imgIncorreta.SetActive(false);
             }
             else
             {
-                txtResultado.text = "Que pena, você errou. " + respostaCorreta;
+                txtResultado.text = "Que pena, você errou.\n" + respostaCorreta;
                 imgCorreta.SetActive(false);
+                imgIncorreta.SetActive(true);
             }
         }
     }
 
     void OnButtonOK()
     {
-        Debug.Log("Clicou OK");
+        if (MathGOUtils.LastTrackableName != mTrackableBehaviour.TrackableName)
+            return;
 
         if (telaResultado != null)
             telaResultado.enabled = false;

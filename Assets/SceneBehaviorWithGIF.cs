@@ -35,8 +35,6 @@ public class SceneBehaviorWithGIF : SceneBehaviorBase
             if (obj3D != null)
                 obj3D.SetActive(true);
         }
-
-        Debug.Log("Caiu na classe filha");
     }
 
     public void EndReached(VideoPlayer videoPlayer)
