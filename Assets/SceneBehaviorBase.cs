@@ -26,7 +26,7 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     public string alternativaB;
     public string alternativaC;
 
-    private bool    respondido       ;
+    //private bool    respondido       ;
     public  eButton rightAnswerButton;
 
     private GameObject imgCorreta  ;
@@ -40,7 +40,7 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         imgCorreta   = GameObject.Find("RespostaCorreta");
         imgIncorreta = GameObject.Find("RespostaIncorreta");
 
-        respondido = false; //ler essa info do Banco (Tu nem vem o banco)
+        //respondido = false; //ler essa info do Banco (Tu nem vem o banco)
 
         this.btnAlternativaA.onClick.AddListener(OnButtonAClick);
         this.btnAlternativaB.onClick.AddListener(OnButtonBClick);
@@ -68,12 +68,17 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
     void OnGenericButtonClick(eButton buttonClicked)
     {
-        if (mTrackableBehaviour.CurrentStatus != TrackableBehaviour.Status.TRACKED || respondido)
+        if (mTrackableBehaviour.CurrentStatus != TrackableBehaviour.Status.TRACKED || MathGOUtils.MarcadorRespondido(mTrackableBehaviour.TrackableName))
             return;
 
         MathGOUtils.LastTrackableName = mTrackableBehaviour.TrackableName;
 
-        respondido = true;
+        Marcador marcador = new Marcador();
+        marcador.MarkerName = mTrackableBehaviour.TrackableName;
+        marcador.Respondido = true;
+
+        MathGOUtils.EquipeSelecionada.Marcadores.Add(marcador);
+        MathGOUtils.ModificaEquipe(MathGOUtils.EquipeSelecionada);
 
         ShowMessage(buttonClicked == rightAnswerButton);
     }
@@ -100,7 +105,10 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     {
         base.OnTrackingFound();
 
-        if (respondido && !telaResultado.isActiveAndEnabled)
+        if (MathGOUtils.EquipeSelecionada == null)
+            return;
+
+        if (MathGOUtils.MarcadorRespondido(mTrackableBehaviour.TrackableName) && !telaResultado.isActiveAndEnabled)
         {
             if (obj3D != null)
                 obj3D.SetActive(true);
@@ -124,7 +132,7 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     {
         base.OnTrackingLost();
 
-        if (!respondido)
+        if (!MathGOUtils.MarcadorRespondido(mTrackableBehaviour.TrackableName))
             canvas.enabled = false;
 
         if (obj3D != null)

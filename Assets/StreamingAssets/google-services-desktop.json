@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 0
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "821314082567-6avkbe7tllvbee49onpgrrpo0mc83ims.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyCASJWXAx5sacUshWM9A8mjq1jW6FC995E"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:821314082567:ios:6a8eb9c4fa130ae6", 
+        "android_client_info": {
+          "package_name": "com.FJEmpreendimentos.MathGO"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "mathgo-a8185.appspot.com", 
+    "project_id": "mathgo-a8185", 
+    "firebase_url": "https://mathgo-a8185.firebaseio.com", 
+    "project_number": "821314082567"
+  }
+}
