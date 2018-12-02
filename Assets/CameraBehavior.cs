@@ -21,19 +21,20 @@ public class CameraBehavior : MonoBehaviour
 
                 /*for (int i = 1; i <= 12; i++)
                 {
-                    Equipe equipe = new Equipe("Equipe " + i, false);
+                    Equipe equipe = new Equipe("Equipe " + i, "Peroba", false);
 
-                    Marcador t1 = new Marcador();
-                    t1.Respondido = true;
-                    t1.MarkerName = "Marcador1";
-                    
-                    equipe.Marcadores.Add(t1);
+                    Membro member1 = new Membro();
+                    member1.name = "Jader Antonio Tomelin";
 
-                    Marcador t2 = new Marcador();
-                    t2.Respondido = true;
-                    t2.MarkerName = "Marcador2";
+                    Membro member2 = new Membro();
+                    member2.name = "Flávio Omar Losada";
 
-                    equipe.Marcadores.Add(t2);
+                    Membro member3 = new Membro();
+                    member3.name = "Matheus Eduardo Hoeltgebaum Pereira";
+
+                    equipe.members.Add(member1);
+                    equipe.members.Add(member2);
+                    equipe.members.Add(member3);
 
                     equipe.Key = "equipe" + i;
                     string json = JsonUtility.ToJson(equipe);

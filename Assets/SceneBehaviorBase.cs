@@ -76,6 +76,7 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
         Marcador marcador = new Marcador();
         marcador.MarkerName = mTrackableBehaviour.TrackableName;
         marcador.Respondido = true;
+        marcador.Correto = buttonClicked == rightAnswerButton;
 
         MathGOUtils.EquipeSelecionada.Marcadores.Add(marcador);
         MathGOUtils.ModificaEquipe(MathGOUtils.EquipeSelecionada);
