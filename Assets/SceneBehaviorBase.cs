@@ -26,7 +26,6 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
     public string alternativaB;
     public string alternativaC;
 
-    //private bool    respondido       ;
     public  eButton rightAnswerButton;
 
     private GameObject imgCorreta  ;
@@ -39,8 +38,6 @@ public class SceneBehaviorBase : DefaultTrackableEventHandler
 
         imgCorreta   = GameObject.Find("RespostaCorreta");
         imgIncorreta = GameObject.Find("RespostaIncorreta");
-
-        //respondido = false; //ler essa info do Banco (Tu nem vem o banco)
 
         this.btnAlternativaA.onClick.AddListener(OnButtonAClick);
         this.btnAlternativaB.onClick.AddListener(OnButtonBClick);

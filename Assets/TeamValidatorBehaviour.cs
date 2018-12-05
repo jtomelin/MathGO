@@ -25,29 +25,6 @@ public class TeamValidatorBehaviour : MonoBehaviour
 
                 MathGOUtils.DataBase = FirebaseDatabase.DefaultInstance.RootReference;
 
-                /*for (int i = 1; i <= 12; i++)
-                {
-                    Equipe equipe = new Equipe("Equipe " + i, "Peroba", false);
-
-                    Membro member1 = new Membro();
-                    member1.name = "Jader Antonio Tomelin";
-
-                    Membro member2 = new Membro();
-                    member2.name = "Flávio Omar Losada";
-
-                    Membro member3 = new Membro();
-                    member3.name = "Matheus Eduardo Hoeltgebaum Pereira";
-
-                    equipe.members.Add(member1);
-                    equipe.members.Add(member2);
-                    equipe.members.Add(member3);
-
-                    equipe.Key = "equipe" + i;
-                    string json = JsonUtility.ToJson(equipe);
-
-                    MathGOUtils.DataBase.Child("equipes").Child(equipe.Key).SetRawJsonValueAsync(json);
-                }*/
-
                 //Buscar todas equipes
                 FirebaseDatabase.DefaultInstance
                 .GetReference("equipes")
@@ -67,13 +44,6 @@ public class TeamValidatorBehaviour : MonoBehaviour
 
                             MathGOUtils.mapEquipes.Add(node.Key, equipe);
                         }
-
-                        //Fazer tela no canvas e devolver o carinha que for validado...
-
-                        /*MathGOUtils.mapEquipes.TryGetValue("equipe1", out MathGOUtils.EquipeSelecionada);
-
-                        MathGOUtils.EquipeSelecionada.Ativa = true;
-                        MathGOUtils.ModificaEquipe(MathGOUtils.EquipeSelecionada);*/
                     }
                 });
             }
@@ -85,9 +55,6 @@ public class TeamValidatorBehaviour : MonoBehaviour
 
         Button btnStart = GameObject.Find("btnStart").GetComponent<Button>();
         btnStart.onClick.AddListener(OnClickStart);
-
-        Button btnCreditos = GameObject.Find("btnCreditos").GetComponent<Button>();
-        btnCreditos.onClick.AddListener(OnClickCreditos);
 
         TeamSelectionCanvas.enabled = false;
     }
@@ -112,9 +79,8 @@ public class TeamValidatorBehaviour : MonoBehaviour
         StartCanvas.enabled = false;
         TeamSelectionCanvas.enabled = true;
         MathGOUtils.ReadyToChooseTeam = true;
-    }
 
-    public void OnClickCreditos()
-    {
+        Text txtSelection = GameObject.Find("txtSelection").GetComponent<Text>();
+        txtSelection.color = new Color(255, 0, 0);
     }
 }

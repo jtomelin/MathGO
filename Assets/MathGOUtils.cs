@@ -9,7 +9,7 @@ public static class MathGOUtils
     public static FirebaseApp FirebaseApp;
     public static DatabaseReference DataBase;
     public static bool FirebaseReady = false;
-    public static Dictionary<string, Equipe> mapEquipes = new Dictionary<string, Equipe>(); //A principio eu ia barrar equipes que ja estao ativas nao permitir entrar em outro celular, porem mudei de ideia
+    public static Dictionary<string, Equipe> mapEquipes = new Dictionary<string, Equipe>();
     public static Equipe EquipeSelecionada;
     public static bool ReadyToChooseTeam = false;
 
